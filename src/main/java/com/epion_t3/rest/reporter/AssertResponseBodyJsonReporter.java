@@ -47,7 +47,7 @@ public class AssertResponseBodyJsonReporter extends AbstractThymeleafCommandRepo
 		variable.put("ignores", command.getIgnores());
 		
 		// Assertion結果の詳細情報の格納
-		variable.put("assertDetails", assertCommandResult.getJsonDifflist());
+		variable.put("assertDetails", assertCommandResult.getJsonDiffList());
 	}
 
 }

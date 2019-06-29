@@ -556,3 +556,7 @@ messages:
     message:
       - lang: ja_JP
         contents: "指定されたエンコーディングはサポート対象外です.エンコーディング：{0}"
+  - id: com.epion_t3.rest.err.9019
+    message:
+      - lang: ja_JP
+        contents: "期待値のJSONファイルが見つかりません.パス：{0}"

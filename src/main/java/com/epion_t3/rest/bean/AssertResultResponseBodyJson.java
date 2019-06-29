@@ -24,6 +24,6 @@ public class AssertResultResponseBodyJson extends AssertCommandResult {
 	/**
 	 * Json差分の結果.
 	 */
-	private List<JsonDiff> jsonDifflist;
+	private List<JsonDiff> jsonDiffList;
 	
 }

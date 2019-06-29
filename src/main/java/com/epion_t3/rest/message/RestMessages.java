@@ -29,6 +29,7 @@ public enum RestMessages implements Messages {
     REST_ERR_9016("com.epion_t3.rest.err.9016"),
     REST_ERR_9017("com.epion_t3.rest.err.9017"),
     REST_ERR_9018("com.epion_t3.rest.err.9018"),
+    REST_ERR_9019("com.epion_t3.rest.err.9019"),
     REST_INFO_1001("com.epion_t3.rest.info.1001"),
     REST_INFO_1002("com.epion_t3.rest.info.1002"),;
 
