@@ -34,6 +34,10 @@ repositories {
     jcenter()
 }
 
+configurations {
+    devtoolsGenerator
+}
+
 dependencies {
 
     // Core Library
@@ -49,6 +53,9 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 
+    // devtools
+    devtoolsGenerator 'com.epion_t3:epion-t3-devtools-generator:0.0.1'
+
 }
 
 // JavaDoc
@@ -60,8 +67,8 @@ tasks.withType(Javadoc) {
 
 // Java
 tasks.withType(JavaCompile) {
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+    sourceCompatibility = 11
+    targetCompatibility = 11
     it.options.encoding = 'UTF-8'
 }
 
@@ -148,4 +155,16 @@ install {
             }
         }
     }
+}
+
+// epion-t3 出力ツール定義
+task devtoolsGenerate(type: JavaExec) {
+    main = "com.epion_t3.devtools.app.Application"
+    classpath = configurations.devtoolsGenerator
+    args = [
+            '-t',
+            "${projectDir}/src/main/resources/et3_rest_spec_config.yaml",
+            '-d',
+            "${projectDir}"
+    ]
 }
